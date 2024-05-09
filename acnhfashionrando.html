@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACNH Fashion Rando</title>
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
+  </head>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: Orange;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 50px;
+      background: -webkit-linear-gradient(LightCoral, Pink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      -webkit-text-stroke: 2px Wheat;
+    }
+
+    .category {
+      padding: 0px;
+    }
+
+    .icon {
+      max-width: 80px;
+      height: auto;
+    }
+
+    .grid-container {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: auto auto auto auto auto;
+      padding: 10px;
+    }
+
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: Wheat;
+      box-shadow: 5px 5px 5px Coral;
+      border-radius: 5px;
+      color: DimGrey;
+      font-weight: bold;
+      text-align: center;
+      padding: 2px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 8px;
+      background-color: #ccc;
+      -webkit-transition: .2s;
+      transition: .2s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      border-radius: 5px;
+      background-color: white;
+      -webkit-transition: .2s;
+      transition: .2s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+  </style>
+
+  <body>
+
+    <h1>Animal Crossing: New Horizons<br>Fashion Rando</h1>
+
+    <div class="grid-container">
+
+      <div class="grid-item">
+        <div class="category">Tops</div>
+        <img class="icon" src="https://dodo.ac/np/images/thumb/3/37/Top_NH_Inv_Icon.png/120px-Top_NH_Inv_Icon.png">
+        <label class="switch">
+          <input type="checkbox" checked="">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="grid-item">
+        <div class="category">Bottoms</div>
+        <img class="icon" src="https://dodo.ac/np/images/thumb/0/0c/Bottoms_NH_Inv_Icon.png/120px-Bottoms_NH_Inv_Icon.png">
+        <label class="switch">
+          <input type="checkbox" checked="">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="grid-item">
+        <div class="category">Dress-Up</div>
+        <img class="icon" src="https://dodo.ac/np/images/thumb/0/02/Dress-Up_NH_Inv_Icon.png/120px-Dress-Up_NH_Inv_Icon.png">
+        <label class="switch">
+          <input type="checkbox" checked="">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="grid-item">
+        <div class="category">Headwear</div>
+        <img class="icon" src="https://dodo.ac/np/images/thumb/c/cc/Headwear_NH_Inv_Icon.png/120px-Headwear_NH_Inv_Icon.png">
+        <label class="switch">
+          <input type="checkbox" checked="">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="grid-item">
+        <div class="category">Accessories</div>
+        <img class="icon" src="https://dodo.ac/np/images/thumb/9/90/Accessory_NH_Inv_Icon.png/120px-Accessory_NH_Inv_Icon.png">
+        <label class="switch">
+          <input type="checkbox" checked="">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="grid-item">
+        <div class="category">Socks</div>
+        <img class="icon" src="https://dodo.ac/np/images/thumb/8/83/Socks_NH_Inv_Icon.png/120px-Socks_NH_Inv_Icon.png">
+        <label class="switch">
+          <input type="checkbox" checked="">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="grid-item">
+        <div class="category">Shoes</div>
+        <img class="icon" src="https://dodo.ac/np/images/thumb/9/91/Shoes_NH_Inv_Icon.png/120px-Shoes_NH_Inv_Icon.png">
+        <label class="switch">
+          <input type="checkbox" checked="">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="grid-item">
+        <div class="category">Bags</div>
+        <img class="icon" src="https://dodo.ac/np/images/thumb/d/d0/Bag_NH_Inv_Icon.png/120px-Bag_NH_Inv_Icon.png">
+        <label class="switch">
+          <input type="checkbox" checked="">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="grid-item">
+        <div class="category">Umbrellas</div>
+        <img class="icon" src="https://dodo.ac/np/images/thumb/b/b7/Umbrella_NH_Inv_Icon.png/120px-Umbrella_NH_Inv_Icon.png">
+        <label class="switch">
+          <input type="checkbox" checked="">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="grid-item">
+        <div class="category">Other</div>
+        <img class="icon" src="https://dodo.ac/np/images/thumb/1/1a/Wet_Suit_NH_Inv_Icon.png/120px-Wet_Suit_NH_Inv_Icon.png">
+        <label class="switch">
+          <input type="checkbox" checked="">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
