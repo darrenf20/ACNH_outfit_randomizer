@@ -113,100 +113,36 @@
 
     <h1>Animal Crossing: New Horizons<br>Fashion Rando</h1>
 
-    <div class="grid-container">
-
-      <div class="grid-item">
-        <div class="category">Tops</div>
-        <img class="icon" src="https://dodo.ac/np/images/thumb/3/37/Top_NH_Inv_Icon.png/120px-Top_NH_Inv_Icon.png">
-        <label class="switch">
-          <input type="checkbox" checked="">
-          <span class="slider"></span>
-        </label>
-      </div>
-
-      <div class="grid-item">
-        <div class="category">Bottoms</div>
-        <img class="icon" src="https://dodo.ac/np/images/thumb/0/0c/Bottoms_NH_Inv_Icon.png/120px-Bottoms_NH_Inv_Icon.png">
-        <label class="switch">
-          <input type="checkbox" checked="">
-          <span class="slider"></span>
-        </label>
-      </div>
-
-      <div class="grid-item">
-        <div class="category">Dress-Up</div>
-        <img class="icon" src="https://dodo.ac/np/images/thumb/0/02/Dress-Up_NH_Inv_Icon.png/120px-Dress-Up_NH_Inv_Icon.png">
-        <label class="switch">
-          <input type="checkbox" checked="">
-          <span class="slider"></span>
-        </label>
-      </div>
-
-      <div class="grid-item">
-        <div class="category">Headwear</div>
-        <img class="icon" src="https://dodo.ac/np/images/thumb/c/cc/Headwear_NH_Inv_Icon.png/120px-Headwear_NH_Inv_Icon.png">
-        <label class="switch">
-          <input type="checkbox" checked="">
-          <span class="slider"></span>
-        </label>
-      </div>
-
-      <div class="grid-item">
-        <div class="category">Accessories</div>
-        <img class="icon" src="https://dodo.ac/np/images/thumb/9/90/Accessory_NH_Inv_Icon.png/120px-Accessory_NH_Inv_Icon.png">
-        <label class="switch">
-          <input type="checkbox" checked="">
-          <span class="slider"></span>
-        </label>
-      </div>
-
-      <div class="grid-item">
-        <div class="category">Socks</div>
-        <img class="icon" src="https://dodo.ac/np/images/thumb/8/83/Socks_NH_Inv_Icon.png/120px-Socks_NH_Inv_Icon.png">
-        <label class="switch">
-          <input type="checkbox" checked="">
-          <span class="slider"></span>
-        </label>
-      </div>
-
-      <div class="grid-item">
-        <div class="category">Shoes</div>
-        <img class="icon" src="https://dodo.ac/np/images/thumb/9/91/Shoes_NH_Inv_Icon.png/120px-Shoes_NH_Inv_Icon.png">
-        <label class="switch">
-          <input type="checkbox" checked="">
-          <span class="slider"></span>
-        </label>
-      </div>
-
-      <div class="grid-item">
-        <div class="category">Bags</div>
-        <img class="icon" src="https://dodo.ac/np/images/thumb/d/d0/Bag_NH_Inv_Icon.png/120px-Bag_NH_Inv_Icon.png">
-        <label class="switch">
-          <input type="checkbox" checked="">
-          <span class="slider"></span>
-        </label>
-      </div>
-
-      <div class="grid-item">
-        <div class="category">Umbrellas</div>
-        <img class="icon" src="https://dodo.ac/np/images/thumb/b/b7/Umbrella_NH_Inv_Icon.png/120px-Umbrella_NH_Inv_Icon.png">
-        <label class="switch">
-          <input type="checkbox" checked="">
-          <span class="slider"></span>
-        </label>
-      </div>
-
-      <div class="grid-item">
-        <div class="category">Other</div>
-        <img class="icon" src="https://dodo.ac/np/images/thumb/1/1a/Wet_Suit_NH_Inv_Icon.png/120px-Wet_Suit_NH_Inv_Icon.png">
-        <label class="switch">
-          <input type="checkbox" checked="">
-          <span class="slider"></span>
-        </label>
-      </div>
-
-    </div>
+    <div id="categories" class="grid-container"></div>
 
   </body>
+
+  <script>
+    const category_data = [
+      ["Tops", "3/37", "Top"],
+      ["Bottoms", "0/0c", "Bottoms"],
+      ["Dress-Up", "0/02", "Dress-Up"],
+      ["Headwear", "c/cc", "Headwear"],
+      ["Accessories", "9/90", "Accessory"],
+      ["Socks", "8/83", "Socks"],
+      ["Shoes", "9/91", "Shoes"],
+      ["Bags", "d/d0", "Bag"],
+      ["Umbrellas", "b/b7", "Umbrella"],
+      ["Other", "1/1a", "Wet_Suit"],
+	];
+
+	for (let i = 0; i < category_data.length; i++) {
+      document.getElementById("categories").innerHTML +=
+	    '<div class="grid-item">' +
+        '<div class="category">' + category_data[i][0] + '</div>' +
+        '<img class="icon" src="https://dodo.ac/np/images/thumb/' + category_data[i][1] + '/' +
+			category_data[i][2] + '_NH_Inv_Icon.png/120px-' + category_data[i][2] + '_NH_Inv_Icon.png">' +
+        '<label class="switch">' +
+          '<input type="checkbox" checked="">' +
+          '<span class="slider"></span>' +
+        '</label>' +
+      '</div>';
+	}
+  </script>
 
 </html>
