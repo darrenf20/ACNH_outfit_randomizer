@@ -136,28 +136,7 @@
 	// :g!/src=.*H_Icon.png"/d
 	// :%s/\v(.+thumb\/)(.{-})(_NH.+)/\2
 
-	for (let i = 0; i < category_data.length; i++) {
-      document.getElementById("categories").innerHTML +=
-	    '<div class="grid-item">' +
-        '<div class="category">' + category_data[i][0] + '</div>' +
-        '<img class="icon" src="https://dodo.ac/np/images/thumb/' + category_data[i][1] + '/' +
-			category_data[i][2] + '_NH_Inv_Icon.png/120px-' + category_data[i][2] + '_NH_Inv_Icon.png">' +
-        '<label class="switch">' +
-          '<input type="checkbox" checked="">' +
-          '<span class="slider"></span>' +
-        '</label>' +
-      '</div>';
-
-	  document.getElementById("randomized").innerHTML += '<div class="grid-item"></div>';
-	}
-
-	function randomize_outfit() {
-      for (let i = 0; i < category_data.length; i++) {
-	  }
-	}
-
-	randomize_outfit();
-
+	// Can't `fetch()` the data we need, so...
 	const tops = [
       ["f/fb/A_Tee"],
       ["4/47/Acid-Washed_Jacket_%28Black%29"],
@@ -1792,6 +1771,37 @@
       ["a/a3/Nook_Inc._Wet_Suit"],
       ["1/10/Nook_Miles"],
 	];
+	
+	const categories = [tops, bottoms, dress_up, headwear, accessories, socks, shoes, bags, umbrellas, other];
+
+	for (let i = 0; i < category_data.length; i++) {
+      document.getElementById("categories").innerHTML +=
+	    '<div class="grid-item">' +
+        '<div class="category">' + category_data[i][0] + '</div>' +
+        '<img class="icon" src="https://dodo.ac/np/images/thumb/' + category_data[i][1] + '/' +
+			category_data[i][2] + '_NH_Inv_Icon.png/120px-' + category_data[i][2] + '_NH_Inv_Icon.png">' +
+        '<label class="switch">' +
+          '<input type="checkbox" checked="">' +
+          '<span class="slider"></span>' +
+        '</label>' +
+      '</div>';
+
+	  document.getElementById("randomized").innerHTML += '<div class="grid-item"></div>';
+	}
+
+	function randomize_outfit() {
+	  const randomized = document.getElementById("randomized");
+	  
+      for (let i = 0; i < category_data.length; i++) {
+		  const len = categories[i].length;
+		  const index = Math.floor(Math.random() * len);
+		  const segment = categories[i][index];
+
+		  randomized.children[i].innerHTML = '<img src="https://dodo.ac/np/images/' + segment + '_NH_Icon.png">';
+	  }
+	}
+
+	randomize_outfit();
 
   </script>
 
