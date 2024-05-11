@@ -13,6 +13,7 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background-color: Orange;
+	  max-width: 1000px;
     }
 
     h1 {
@@ -33,12 +34,13 @@
       max-width: 80px;
       height: auto;
     }
-
+	
     .grid-container {
       display: grid;
       gap: 10px;
-      grid-template-columns: auto auto auto auto auto;
-      padding: 10px;
+      grid-template-columns: 120px 120px;
+	  float: left;
+	  margin: 50px;
     }
 
     .grid-item {
@@ -52,8 +54,12 @@
       color: DimGrey;
       font-weight: bold;
       text-align: center;
-      padding: 2px;
+      padding: 10px;
     }
+
+	img.pic {
+      max-width: 100px;
+	}
 
     .switch {
       position: relative;
@@ -107,6 +113,18 @@
       -ms-transform: translateX(26px);
       transform: translateX(26px);
     }
+
+	#randbutton {
+      cursor: pointer;
+      width: 200px;
+	  opacity: 60%;
+	  transition: 0.3s;
+	}
+
+	#randbutton:hover {
+	  opacity: 40%;
+	}
+
   </style>
 
   <body>
@@ -116,6 +134,8 @@
     <div id="categories" class="grid-container"></div>
 
 	<div id="randomized" class="grid-container"></div>
+
+	<img id="randbutton" onclick="randomize()" src="https://cdn-icons-png.flaticon.com/512/25/25429.png" />
 
   </body>
 
@@ -1681,8 +1701,8 @@
 
 		  const name = segment.substr(segment.lastIndexOf("/") + 1).replace(/_/g, " ").replace(/%26/g, "&");
 
-          randomized.children[i].innerHTML = "<p>" + name + "</p>";
-		  randomized.children[i].innerHTML += '<img src="https://dodo.ac/np/images/' + segment + '_NH_Icon.png">';
+          randomized.children[i].innerHTML = name;
+		  randomized.children[i].innerHTML += '<img class="pic" src="https://dodo.ac/np/images/' + segment + '_NH_Icon.png">';
 	  }
 	}
 
