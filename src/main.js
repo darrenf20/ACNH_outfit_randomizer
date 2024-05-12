@@ -41,23 +41,25 @@ function cache_new_images() {
 		const name = segment.substr(segment.lastIndexOf("/") + 1).replace(/_/g, " ").replace(/%26/g, "&");
 		const image = new Image(100);
 		image.src = "https://dodo.ac/np/images/" + segment + "_NH_Icon.png";
+		image.className = "item_img";
 		cached.names.push(name);
 		cached.images.push(image);
 	}
 }
 
-function show_images() {
-	for (let i = 0; i < url_frags.length; i++) {
-		randomized.children[i].innerHTML = '<div class="panel">' + cached.names[i] + '</div>';
-		randomized.children[i].appendChild(cached.images[i]);
+function show_cached_content() {
+	for (let i = 0; i < cached.names.length; i++) {
+		randomized.children[2 * i].innerHTML = "";
+		randomized.children[2 * i].append(cached.images[i]);
+		randomized.children[2 * i + 1].innerHTML = cached.names[i];
 	}
 }
 
 function check_radio_option() {
 	const tops = randomized.children[0];
-	const bottoms = randomized.children[1];
-	const dressup = randomized.children[2];
-	const other = randomized.children[9];
+	const bottoms = randomized.children[2];
+	const dressup = randomized.children[4];
+	const other = randomized.children[18];
 
 	tops.style.display = "none";
 	bottoms.style.display = "none";
@@ -76,7 +78,7 @@ function check_radio_option() {
 
 function randomize_outfit() {
 	check_radio_option();
-	show_images();
+	show_cached_content();
 	cache_new_images();
 }
 
