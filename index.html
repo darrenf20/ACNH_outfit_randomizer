@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACNHOR</title>
+    <link rel="icon" type="image/x-icon" href="https://dodo.ac/np/images/c/c8/Animal_Crossing_Enciclopedia_Favicon.png">
+	<link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body onload="randomize_outfit()">
+
+    <h1>Animal Crossing: New Horizons<br>Outfit Randomizer</h1>
+
+	<div id="randomized" class="grid-container">
+	  <div class="grid-item" style="grid-area: 3 / 2 / 4 / 3"></div> <!-- Tops -->
+	  <div class="grid-item" style="grid-area: 4 / 2 / 5 / 3"></div> <!-- Bottoms -->
+	  <div class="grid-item" style="grid-area: 3 / 2 / 5 / 3"></div> <!-- Dress-Up -->
+	  <div class="grid-item" style="grid-area: 1 / 2 / 2 / 3"></div> <!-- Headwear -->
+	  <div class="grid-item" style="grid-area: 2 / 2 / 3 / 3"></div> <!-- Accessories -->
+	  <div class="grid-item" style="grid-area: 5 / 1 / 6 / 2"></div> <!-- Socks -->
+	  <div class="grid-item" style="grid-area: 5 / 2 / 6 / 3"></div> <!-- Shoes -->
+	  <div class="grid-item" style="grid-area: 3 / 1 / 4 / 2"></div> <!-- Bags -->
+	  <div class="grid-item" style="grid-area: 2 / 3 / 4 / 4"></div> <!-- Umbrellas -->
+	  <div class="grid-item" style="grid-area: 3 / 2 / 5 / 3"></div> <!-- Other -->
+	</div>
+
+    <img id="randbutton" onclick="randomize_outfit()" src="https://cdn-icons-png.flaticon.com/512/25/25429.png" />
+
+	<input type="radio" id="topbot" name="outfit_main" checked=""/><label for="topbot">Top + Bottom</label><br>
+    <input type="radio" id="dressup" name="outfit_main" /><label for="dressup">Dress-Up</label><br>
+    <input type="radio" id="other" name="outfit_main" /><label for="other">Other</label><br>
+
+    <div id="categories" class="grid-container"></div>
+
+	<script type="text/javascript" src="main.js"></script>
+
+  </body>
+
+</html>
