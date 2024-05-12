@@ -18,7 +18,7 @@ const randomized = document.getElementById("randomized");
 // Set up the category selectors
 for (let i = 0; i < url_frags.length; i++) {
 	document.getElementById("categories").innerHTML +=
-		'<div class="grid-item">' +
+		'<div class="grid-item panel">' +
 		'<div class="category">' + url_frags[i][0] + '</div>' +
 		'<img class="icon" src="https://dodo.ac/np/images/thumb/' + url_frags[i][1] + '/' +
 			url_frags[i][2] + '_NH_Inv_Icon.png/120px-' + url_frags[i][2] + '_NH_Inv_Icon.png">' +
@@ -48,7 +48,7 @@ function cache_new_images() {
 
 function show_images() {
 	for (let i = 0; i < url_frags.length; i++) {
-		randomized.children[i].innerHTML = cached.names[i];
+		randomized.children[i].innerHTML = '<div class="panel">' + cached.names[i] + '</div>';
 		randomized.children[i].appendChild(cached.images[i]);
 	}
 }

@@ -14,26 +14,32 @@
 
     <h1>Animal Crossing: New Horizons<br>Outfit Randomizer</h1>
 
-	<div id="randomized" class="grid-container">
-	  <div class="grid-item" style="grid-area: 3 / 2 / 4 / 3"></div> <!-- Tops -->
-	  <div class="grid-item" style="grid-area: 4 / 2 / 5 / 3"></div> <!-- Bottoms -->
-	  <div class="grid-item" style="grid-area: 3 / 2 / 5 / 3"></div> <!-- Dress-Up -->
-	  <div class="grid-item" style="grid-area: 1 / 2 / 2 / 3"></div> <!-- Headwear -->
-	  <div class="grid-item" style="grid-area: 2 / 2 / 3 / 3"></div> <!-- Accessories -->
-	  <div class="grid-item" style="grid-area: 5 / 1 / 6 / 2"></div> <!-- Socks -->
-	  <div class="grid-item" style="grid-area: 5 / 2 / 6 / 3"></div> <!-- Shoes -->
-	  <div class="grid-item" style="grid-area: 3 / 1 / 4 / 2"></div> <!-- Bags -->
-	  <div class="grid-item" style="grid-area: 2 / 3 / 4 / 4"></div> <!-- Umbrellas -->
-	  <div class="grid-item" style="grid-area: 3 / 2 / 5 / 3"></div> <!-- Other -->
+	<div class="flex-container">
+
+		<div id="randomized" class="grid-container">
+		  <div class="grid-item" style="grid-area: 3 / 2 / 4 / 3"></div> <!-- Tops -->
+		  <div class="grid-item" style="grid-area: 4 / 2 / 5 / 3"></div> <!-- Bottoms -->
+		  <div class="grid-item" style="grid-area: 3 / 2 / 5 / 3"></div> <!-- Dress-Up -->
+		  <div class="grid-item" style="grid-area: 1 / 2 / 2 / 3"></div> <!-- Headwear -->
+		  <div class="grid-item" style="grid-area: 2 / 2 / 3 / 3"></div> <!-- Accessories -->
+		  <div class="grid-item" style="grid-area: 5 / 1 / 6 / 2"></div> <!-- Socks -->
+		  <div class="grid-item" style="grid-area: 5 / 2 / 6 / 3"></div> <!-- Shoes -->
+		  <div class="grid-item" style="grid-area: 3 / 1 / 4 / 2"></div> <!-- Bags -->
+		  <div class="grid-item" style="grid-area: 2 / 3 / 4 / 4"></div> <!-- Umbrellas -->
+		  <div class="grid-item" style="grid-area: 3 / 2 / 5 / 3"></div> <!-- Other -->
+		</div>
+
+		<img id="randbutton" onclick="randomize_outfit()" src="https://cdn-icons-png.flaticon.com/512/25/25429.png" />
+
+		<div id="radio-options">
+			<input type="radio" id="topbot" name="outfit_main" checked=""/><label for="topbot">Top + Bottom</label><br>
+			<input type="radio" id="dressup" name="outfit_main" /><label for="dressup">Dress-Up</label><br>
+			<input type="radio" id="other" name="outfit_main" /><label for="other">Other</label><br>
+		</div>
+
+		<div id="categories" class="grid-container"></div>
+
 	</div>
-
-    <img id="randbutton" onclick="randomize_outfit()" src="https://cdn-icons-png.flaticon.com/512/25/25429.png" />
-
-	<input type="radio" id="topbot" name="outfit_main" checked=""/><label for="topbot">Top + Bottom</label><br>
-    <input type="radio" id="dressup" name="outfit_main" /><label for="dressup">Dress-Up</label><br>
-    <input type="radio" id="other" name="outfit_main" /><label for="other">Other</label><br>
-
-    <div id="categories" class="grid-container"></div>
 
 	<script type="text/javascript" src="main.js"></script>
 
