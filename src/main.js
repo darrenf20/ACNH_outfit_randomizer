@@ -55,29 +55,38 @@ function show_cached_content() {
 	}
 }
 
-function check_radio_option() {
-	const tops = randomized.children[0];
-	const bottoms = randomized.children[2];
-	const dressup = randomized.children[4];
-	const other = randomized.children[18];
+function handle_radio_option() {
+	const tops_image = randomized.children[0];
+	const tops_label = randomized.children[1];
+	const bottoms_image = randomized.children[2];
+	const bottoms_label = randomized.children[3];
+	const dressup_image = randomized.children[4];
+	const dressup_label = randomized.children[5];
+	const other_image = randomized.children[18];
+	const other_label = randomized.children[19];
 
-	tops.style.display = "none";
-	bottoms.style.display = "none";
-	dressup.style.display = "none";
-	other.style.display = "none";
+	const arr = [tops_image, tops_label, bottoms_image, bottoms_label, dressup_image, dressup_label, other_image, other_label];
+	for (let i = 0; i < arr.length; i++) {
+		arr[i].style.display = "none";
+		arr[i].style.alignContent = "center";
+	}
 
 	if (document.getElementById("dressup").checked) {
-		dressup.style.display = "block";      
+		dressup_image.style.display = "block";      
+		dressup_label.style.display = "block";      
 	} else if (document.getElementById("other").checked) {
-		other.style.display = "block";
+		other_image.style.display = "block";
+		other_label.style.display = "block";
 	} else {
-		tops.style.display = "block";
-		bottoms.style.display = "block";
+		tops_image.style.display = "block";
+		tops_label.style.display = "block";
+		bottoms_image.style.display = "block";
+		bottoms_label.style.display = "block";
 	}
 }
 
 function randomize_outfit() {
-	check_radio_option();
+	handle_radio_option();
 	show_cached_content();
 	cache_new_images();
 }
